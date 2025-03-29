@@ -112,6 +112,10 @@ app.use ('/listings/:id/reviews', reviewRouter);
 app.use('/', userRouter);
 
 
+app.get("/listings/icons"), (req, res)=>{
+    res.send("This feature is coming soon! Stay tuned for updates.")
+};
+
 
 app.all("*", (req, res, next) => {
     res.status(404).render("error", { message: "Page Not Found!" });
